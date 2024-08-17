@@ -299,7 +299,7 @@
 }
 
 .banner-img {
-    background-image: url('/images/main-banner.svg');
+    background-image: url('./images/main-banner.svg');
     background-size: contain;
     position: relative;
     background-position: center;
@@ -1142,7 +1142,7 @@ footer p.copyright {
         padding: 0px;
     }
     .banner-img {
-        background-image: url('/images/main-banner.svg');
+        background-image: url('./images/main-banner.svg');
         /* Ensure you use the correct path for your mobile image */
         background-size: cover;
         /* Use cover to ensure the background image covers the entire container */
