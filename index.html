@@ -14,7 +14,33 @@
 
 <body>
     <main>
+        <div class="navModal">
+            <div class="mobleNavbar">
+                <div class="close-bar">
+                    <img onclick="closeModal()" src="./icons/close.svg" />
+                </div>
+                <div class="sidenav-menu-items">
+                    <a href="">About</a>
+
+                    <a href="">Offers</a>
+
+                    <a href="">Coporate</a>
+
+                    <a href="">Personal</a>
+
+                    <a href="">Locations</a>
+
+                    <a href="">Contact Us</a>
+
+                    <button id="login-signup">Login / Sign Up</button>
+                </div>
+            </div>
+        </div>
+
         <div class="nav">
+            <div>
+
+            </div>
             <div class="container">
                 <ul type="none">
                     <li>
@@ -31,7 +57,7 @@
                     </li>
                 </ul>
             </div>
-
+            <!-- deskstop view -->
             <div class="nav-bar">
                 <div class="title">
                     <img src="./images/title.svg" alt="title" />
@@ -54,12 +80,18 @@
                         </button>
                     </div>
 
+
+                    <!-- mobile view -->
+
+
+
                     <!-- hamburger -->
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
                         <i class="fa fa-bars"></i>
                     </a>
                 </div>
             </div>
+
             <div class="content">
                 <marquee class="summary">
                     Sunday Pick Up/Drop-Off only at Dubai Silicon Oasis & Habtoor Grand
@@ -96,7 +128,7 @@
 
         <div class="searching">
             <div class="snap">
-                <img   width="40px" src="./icons/phone-icon.svg" alt="">
+                <img width="40px" src="./icons/phone-icon.svg" alt="">
             </div>
 
             <div class="snap1">
@@ -106,7 +138,7 @@
                 </div>
             </div>
 
-            
+
             <div class="searching-img">
                 <div class="menu-list">
                     <ul type="none">
@@ -127,7 +159,7 @@
                     </ul>
                 </div>
                 <div class="inputs">
-                    <input type="text" class="location-icon" placeholder="Al Quoz"/>
+                    <input type="text" class="location-icon" placeholder="Al Quoz" />
                     <input type="date" id="calender" />
                     <input type="date" />
                     <div class="search">
@@ -549,9 +581,22 @@
 </body>
 
 <script>
-    function myFunction() {
-        let x = document.getElementById("myLinks");
-        x.classList.toggle("show");
+
+
+    function toggleMenu() {
+        var modal = document.getElementsByClassName("navModal")[0];
+
+        // Toggle the display property between 'block' and 'none'
+        if (modal.style.display === "block") {
+            modal.style.display = "none";
+        } else {
+            modal.style.display = "block";
+        }
+    }
+
+    function closeModal() {
+        var modal = document.getElementsByClassName("navModal")[0];
+        modal.style.display = "none";
     }
 
 
